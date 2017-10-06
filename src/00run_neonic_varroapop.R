@@ -23,56 +23,21 @@ version
 #Determine path directory based on the user machine######
 #tom epa windows 2
 if(Sys.info()[4]=="DZ2626UTPURUCKE"){
-  vpdir<-path.expand("k:/git/beeRpop/")
-  vpdir2<-path.expand("k:/git/beeRpop/")
+  vpdir<-path.expand("k:/git/garber_vp/")
+  vpdir2<-path.expand("k:/git/garber_vp/")
   # varroapop file (without directory, the file needs to be in vpdir_exe above)
   vrp_filename <- "comparison_stp_epaw.vrp"
 }
 #tom mac air
 if(Sys.info()[4]=="stp-air"){
-  vpdir<-path.expand("~/git/beeRpop/")
-}
-#tom mac air
-if(Sys.info()[4]=="stp-air.local"){
-  vpdir<-path.expand("~/git/beeRpop/")
-}
-#marcia epa computer
-if(Sys.info()[4]=="LZ2626UMSNYDE02"){
-  vpdir<-path.expand("C:/Users/msnyde02/varroapoptest2/")
-  # varroapop file (without directory, the file needs to be in vpdir_exe above)
-  vrp_filename <- "comparison.vrp"
-}
-#carmen personal laptop
-if(Sys.info()[4]=="Ashleys-MBP"||Sys.info()[4]=="Ashleys-MacBook-Pro-2.local"||
-   Sys.info()[4]=="Ashleys-MBP-2"||Sys.info()[4]=="Ashleys-MacBook-Pro.local") {
-  vpdir<-path.expand("~/git/beeRpop/")
-  # varroapop file (without directory, the file needs to be in vpdir_exe above)
-  vrp_filename <- "default.vrp"
-}
-#carmen other personal laptop
-if(Sys.info()[4]=="ACKUAN-PC"){
-  vpdir<-path.expand("C:/gitrepo/beeRpop/")
-  # varroapop file (without directory, the file needs to be in vpdir_exe above)
-  vrp_filename <- "default_carmen.vrp"
-}
-#carmen epa desktop 2
-if(Sys.info()[4]=="DZ2626UCKUAN"){
-  vpdir<-path.expand("C:/Users/Ckuan/Desktop/ckuan/git/beeRpop/")
-  vpdir2<-path.expand("C:/Program Files (x86)/Varroapop/")
-  # varroapop file (without directory, the file needs to be in vpdir_exe above)
-  vrp_filename <- "carmen_new.vrp"
+  vpdir<-path.expand("~/git/garber_vp/")
 }
 #andrew epa
 if(Sys.info()[4]=="LZ2032EAKANAREK"){
-  vpdir <- path.expand("C:/Users/AKanarek/Documents/GitHub/beeRpop/")
+  vpdir <- path.expand("C:/Users/AKanarek/Documents/GitHub/garber_vp/")
   # varroapop file (without directory, the file needs to be in vpdir_exe above)
   vrp_filename <- "comparison.vrp"
 } 
-if(Sys.info()[4]=="DZ2626UKWOLFE"){
-  vpdir<-path.expand("E:/VarroaPop/beeRpop/")
-  # varroapop file (without directory, the file needs to be in vpdir_exe above)
-  vrp_filename <- "comparison_kurt.vrp"
-}
 
 #subdirectories
 vpdir_input <- paste(vpdir, "input/", sep = "")
