@@ -26,7 +26,7 @@ if(Sys.info()[4]=="DZ2626UTPURUCKE"){
   vpdir<-path.expand("k:/git/garber_vp/")
   vpdir2<-path.expand("k:/git/garber_vp/")
   # varroapop file (without directory, the file needs to be in vpdir_exe above)
-  vrp_filename <- "comparison_stp_epaw.vrp"
+  vrp_filename <- "comparison_stp_epa_windows_kdrive_garber.vrp"
 }
 #tom mac air
 if(Sys.info()[4]=="stp-air"){
@@ -67,6 +67,8 @@ Nsims <- 1000
 
 #weather file
 #can be .dvf or .wth
+#question for Bob
+# i think it needs to agree with whatever the vrp file says?
 vrp_weather <- "w93193-tempadj.dvf"
 #vrp_weather <- "Midwest5Yr.wth"
 
