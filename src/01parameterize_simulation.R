@@ -111,6 +111,10 @@ soil_end <- rep("07/31/1989", Nsims) ; inputdf <- cbind(inputdf, soil_end) #Soil
 seed_begin <- rep("07/01/1989", Nsims) ; inputdf <- cbind(inputdf, seed_begin) #SeedForageBegin
 seed_end <- rep("07/31/1989", Nsims) ; inputdf <- cbind(inputdf, seed_end) #SeedForageEnd
 
+
+max_nectar <- runif(Nsims, 70000, 130000) ; inputdf <- cbind(inputdf, soilp) #MaxColNectar
+max_pollen <- runif(Nsims, 30000, 70000) ; inputdf <- cbind(inputdf, soilp) #MaxColPollen
+
 ## leftovers
 #folforagebeg <- rep("mm/dd/yyyy", Nsims) ; inputdf <- cbind(inputdf, folforagebeg) #FoliarForageBegin
 #folforageend <- rep("mm/dd/yyyy", Nsims) ; inputdf <- cbind(inputdf, folforageend) #FoliarForageEnd

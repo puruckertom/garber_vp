@@ -1,5 +1,5 @@
 #create input files #########
-for (i in 1:Nsims) {
+for(i in 1:Nsims) {
   #weather <- ("WeatherFileName=")
   #weathervalue <- weather_file[i]
   ##initial parameter distributions
