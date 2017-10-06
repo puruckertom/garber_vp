@@ -45,7 +45,7 @@ for (i in 1:Nsims) {
   #git executable, vrp reference for weather file has to point to vpdir_exe directory
   vpdir_command <- paste(vpdir_exe, vrp_filename, 
                           " /b /or ", vpdir_out_control, outputfile, 
-                          " /i ", vpdir_in_control, inputfile, " /ol ", vpdir_log, logfile, sep="")
+                          " /i ", vpdir_in_control, inputfile, " /ol ", vpdir_log_control, logfile, sep="")
   print(paste(vpdir_executable, vpdir_command, sep=" "))
   system2(vpdir_executable, vpdir_command)
 }
@@ -58,7 +58,7 @@ for (i in 1:Nsims) {
   logfile<- paste("log",i,"exp.txt", sep="")
   vpdir_command <- paste(vpdir_exe, vrp_filename, 
                          " /b /or ", vpdir_out_foliar, outputfile, 
-                         " /i ", vpdir_in_foliar, inputfile, " /ol ", vpdir_log, logfile, sep="")
+                         " /i ", vpdir_in_foliar, inputfile, " /ol ", vpdir_log_foliar, logfile, sep="")
   print(paste(vpdir_executable, vpdir_command, sep=" "))
   system2(vpdir_executable, vpdir_command)
 }
@@ -71,7 +71,7 @@ for (i in 1:Nsims) {
   logfile<- paste("log",i,"exp.txt", sep="")
   vpdir_command <- paste(vpdir_exe, vrp_filename, 
                          " /b /or ", vpdir_out_seed, outputfile, 
-                         " /i ", vpdir_in_seed, inputfile, " /ol ", vpdir_log, logfile, sep="")
+                         " /i ", vpdir_in_seed, inputfile, " /ol ", vpdir_log_seed, logfile, sep="")
   print(paste(vpdir_executable, vpdir_command, sep=" "))
   system2(vpdir_executable, vpdir_command)
 }
@@ -84,7 +84,7 @@ for (i in 1:Nsims) {
   logfile<- paste("log",i,"exp.txt", sep="")
   vpdir_command <- paste(vpdir_exe, vrp_filename, 
                          " /b /or ", vpdir_out_soil, outputfile, 
-                         " /i ", vpdir_in_soil, inputfile, " /ol ", vpdir_log, logfile, sep="")
+                         " /i ", vpdir_in_soil, inputfile, " /ol ", vpdir_log_soil, logfile, sep="")
   print(paste(vpdir_executable, vpdir_command, sep=" "))
   system2(vpdir_executable, vpdir_command)
 }

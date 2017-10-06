@@ -42,7 +42,10 @@ if(Sys.info()[4]=="LZ2032EAKANAREK"){
 #subdirectories
 vpdir_input <- paste(vpdir, "input/", sep = "")
 vpdir_output <- paste(vpdir, "output/", sep = "")
-vpdir_log <- paste(vpdir, "log/", sep = "")
+vpdir_log_foliar <- paste(vpdir, "log/foliar/", sep = "")
+vpdir_log_control <- paste(vpdir, "log/control/", sep = "")
+vpdir_log_seed <- paste(vpdir, "log/seed/", sep = "")
+vpdir_log_soil <- paste(vpdir, "log/soil/", sep = "")
 vpdir_fig <- paste(vpdir, "figures/", sep = "")
 vpdir_exe <- paste(vpdir, "exe/", sep = "")
 vpdir_io <- paste(vpdir, "io/", sep = "")
