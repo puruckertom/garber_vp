@@ -124,6 +124,10 @@ for(i in 1:Nsims) {
   inputvalue57 <- wkrbroodinfest[i]
   parameter58 <- ("ICWorkerMiteOffspring=") #ICWorkerMiteOffspring
   inputvalue58 <- wkrmiteoffspring[i]
+  parameter59 <- ("MaxColNectar=") #MaxColNectar
+  inputvalue59 <- max_nectar[i]
+  parameter60 <- ("MaxColPollen=") #MaxColPollen
+  inputvalue60 <- max_pollen[i]
   
   varroainput0 <- paste(parameter0, inputvalue0, sep = " ")
   write(varroainput0, file = paste(vpdir_in_foliar, "input", i, ".txt", sep = ""), append = FALSE)
@@ -381,6 +385,16 @@ for(i in 1:Nsims) {
   write(varroainput58, file = paste(vpdir_in_foliar, "input", i, ".txt", sep = ""), append = TRUE, sep = "\n")
   write(varroainput58, file = paste(vpdir_in_seed, "input", i, ".txt", sep = ""), append = TRUE, sep = "\n")
   write(varroainput58, file = paste(vpdir_in_soil, "input", i, ".txt", sep = ""), append = TRUE, sep = "\n")
+  varroainput59 <- paste(parameter59, inputvalue59, sep = " ")
+  write(varroainput59, file = paste(vpdir_in_control, "input", i, ".txt", sep=""), append = TRUE, sep = "\n")
+  write(varroainput59, file = paste(vpdir_in_foliar, "input", i, ".txt", sep = ""), append = TRUE, sep = "\n")
+  write(varroainput59, file = paste(vpdir_in_seed, "input", i, ".txt", sep = ""), append = TRUE, sep = "\n")
+  write(varroainput59, file = paste(vpdir_in_soil, "input", i, ".txt", sep = ""), append = TRUE, sep = "\n")
+  varroainput60 <- paste(parameter60, inputvalue60, sep = " ")
+  write(varroainput60, file = paste(vpdir_in_control, "input", i, ".txt", sep=""), append = TRUE, sep = "\n")
+  write(varroainput60, file = paste(vpdir_in_foliar, "input", i, ".txt", sep = ""), append = TRUE, sep = "\n")
+  write(varroainput60, file = paste(vpdir_in_seed, "input", i, ".txt", sep = ""), append = TRUE, sep = "\n")
+  write(varroainput60, file = paste(vpdir_in_soil, "input", i, ".txt", sep = ""), append = TRUE, sep = "\n")
   
   write("ESeedConcentration= 0", file = paste(vpdir_in_control, "input", i, ".txt", sep=""), append = TRUE, sep = "\n")
   #varroainputweather <- paste(weather, weathervalue, sep= " ")
