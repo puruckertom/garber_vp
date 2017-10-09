@@ -28,7 +28,11 @@ print("the .vrp file has to know where the weather file is, R cannot tell it!")
 #on epa windows symantec is returning a security threat every ~45 simulations
 #the R process must be able to execute the varroapo0p process
 #so a machine with elevated privileges R needs to be installed to a user-owned directory
-#or disable symantec, create exception
+#or disable symantec endpoint protection
+# creating exceptions has no effect
+# https://support.symantec.com/en_US/article.TECH173432.html
+# https://submit.symantec.com/false_positive/
+
 
 #CONTROL
 for (i in 1:Nsims) {
