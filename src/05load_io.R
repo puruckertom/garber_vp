@@ -22,7 +22,8 @@ nrows<- length(timearray)
 #CONTROL
 indata_control <- read.csv(file = paste(vpdir_in_control, "inputdata_control.csv", sep = ""), header = TRUE)
 #cut out column "X"
-inputdata_control<- indata_control%>%select_if(is.numeric)%>%select(-1)
+del_col <- which(colnames(indata_control)=="X")
+inputdata_control<- indata_control[,-del_col]
 #FOLIAR
 indata_foliar <- read.csv(file = paste(vpdir_in_foliar, "inputdata_foliar.csv", sep = ""), header = TRUE)
 inputdata_foliar<- indata_foliar%>%select_if(is.numeric)%>%select(-1)

@@ -1,3 +1,7 @@
+# install current version of R
+
+# install current version of RStudio
+
 #check to make sure required packages are installed
 list.of.packages <- c("plyr", "dplyr", "reshape2", "ggplot2", "grid", "gridExtra", "sensitivity", "abind", 
                       "ppcor")
@@ -34,6 +38,12 @@ if(Sys.info()[4]=="stp-air"){
 }
 #andrew epa
 if(Sys.info()[4]=="LZ2032EAKANAREK"){
+  vpdir <- path.expand("C:/Users/AKanarek/Documents/GitHub/garber_vp/")
+  # varroapop file (without directory, the file needs to be in vpdir_exe above)
+  vrp_filename <- "comparison.vrp"
+} 
+#kris epa
+if(Sys.info()[4]==""){
   vpdir <- path.expand("C:/Users/AKanarek/Documents/GitHub/garber_vp/")
   # varroapop file (without directory, the file needs to be in vpdir_exe above)
   vrp_filename <- "comparison.vrp"
@@ -80,6 +90,8 @@ vrp_weather <- "w93193-tempadj.dvf"
 simstart <- "01/01/1988"
 simend <- "12/31/1990"
 
+##############################################################
+###############################################################
 #run everything
 # define distributions for input parameters
 source(paste(vpdir,"src/01parameterize_simulation.R",sep = ""))

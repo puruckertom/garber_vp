@@ -12,13 +12,14 @@ timearray<- as.Date(timearray,"%m/%d/%Y")
 timediff <- timearray[3]-timearray[2]
 timearray[1] <- timearray[2]-timediff
 length(timearray)
+ncols
 outvar<- c("Date","Colony Size","Adult Drones","Adult Workers", "Foragers", "Capped Drone Brood", "Capped Worker Brood",
            "Drone Larvae", "Worker Larvae", "Drone Eggs", "Worker Eggs", "Free Mites", "Drone Brood Mites",
            "Worker Brood Mites", "Mites/Drone Cell", "Mites/Worker Cell", "Mites Dying", "Proportion Mites Dying",
            "Colony Pollen (g)", "Pollen Pesticide Concentration", "Colony Nectar", "Nectar Pesticide Concentration",
            "Dead Drone Larvae", "Dead Worker Larvae", "Dead Drone Adults", "Dead Worker Adults", "Dead Foragers",
            "Queen Strength", "Average Temperature (celsius)", "Rain")
-
+length(outvar)
 
 
 # read output files

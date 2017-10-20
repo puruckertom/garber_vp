@@ -13,16 +13,23 @@ dim(inputdata_control)
 nvars_control <- length(inputdata_control)
 
 #create pcc array for control
-tdarray_pccout_control<- array(data=NA, c(ndays,nvars_control))
+tdarray_pccout_control<- array(data=NA, c(ndays,nvars_control-13)) #drop nonquant cols below
 
 #partial correlation coefficients
+dim(inputdata_control)
+colnames(inputdata_control)
 for (i in 1:ndays){  #break
   temp<- tdoutput_control[i,1:Nsims]
   inputdata_control$RQQueenStrength <- tdarray_control[i,27,] #replace output qs for requeen strength input
 #  inputdata_control$AvgTemp <- tdarray_control[i,28,1:Nsims] #append avg temp to input dataframe
 #  inputdata_control$Precip <- tdarray_control[i,29,1:Nsims] #append precip to input dataframe
-  temp_pcc<- pcc(inputdata_control, temp, rank = F)
+  #drop nonquantitative input variables for pcc
+  inputdata_control2 <- inputdata_control[-c(1:3,10,22,23,50:52,56:59)]
+  print(dim(inputdata_control2))
+  print(dim(temp))
+  temp_pcc<- pcc(inputdata_control2, temp, rank = F)
   print(paste(i,"out of",ndays)) 
+  print(dim(tdarray_pccout_control))
   tdarray_pccout_control[i,] <- temp_pcc$PCC[[1]]
 }
 
